@@ -8,7 +8,7 @@ script.onload = function() {
 document.getElementsByTagName('head')[0].appendChild(script);
 
 var script = document.createElement('script');
-script.src = "http://ajax.googleapis.com/ajax/libs/jqueryui/2.8.18/jquery-ui.min.js";
+script.src = "http://code.jquery.com/ui/1.9.1/jquery-ui.min.js";
 script.type = "text/javascript";
 script.onload = function() {
   jQuery.noConflict();
