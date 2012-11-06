@@ -2,6 +2,7 @@ alert("Its working");
 
 loadjscssfile("http://twitter.github.com/bootstrap/assets/js/bootstrap.js", "js");
 loadjscssfile("http://twitter.github.com/bootstrap/assets/css/bootstrap.css","css");
+loadjscssfile("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js","js");
 loadjscssfile("http://raw.github.com/mduca/bookmarklets/master/hermes.prototype.js","js");
 
 
