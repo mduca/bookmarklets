@@ -1,7 +1,8 @@
 alert("Its working");
 
-loadjscssfile("http://raw.github.com/mduca/bookmarklets/master/test.js","js");
-
+loadjscssfile("http://twitter.github.com/bootstrap/assets/js/bootstrap.js", "js");
+loadjscssfile("http://twitter.github.com/bootstrap/assets/css/bootstrap.css","css");
+loadjscssfile("http://raw.github.com/mduca/bookmarklets/master/hermes.prototype.js","js");
 
 
 function loadjscssfile(filename, filetype){
