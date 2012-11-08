@@ -3,7 +3,8 @@ var resources = [ "http://twitter.github.com/bootstrap/assets/css/bootstrap.css"
                   "http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css",
                   "http://twitter.github.com/bootstrap/assets/js/bootstrap.js",
                   "http://code.jquery.com/ui/1.9.1/jquery-ui.min.js",
-                  ]
+                  ];
+var head = document.getElementsByTagName('head')[0];
 
 function fileType(file) {
   return file.split('.').pop();
@@ -13,23 +14,19 @@ function jsOrCss(file) {
   fileType(file) == 'js' ? createScriptTag(file) : createLinkTag(file);
 }
 
-function addToHead(addMe) {
-  document.getElementsByTagName('head')[0].appendChild(addMe);
-}
-
 function createLinkTag(url) {
   var css = document.createElement('link');
   css.href = url;
   css.rel = "stylesheet";
   css.type = "text/css";
-  //return css;
+  return css;
 }
 
 function createScriptTag(url) {
   var script = document.createElement('script');
   script.src = url;
   script.type = "text/javascript";
- // return script;
+  return script;
 }
 
 var script = document.createElement('script');
@@ -42,10 +39,10 @@ script.onload = function() {
    jQuery("body").append(barHtml);
    jQuery("#hermes").draggable();
 }
-document.getElementsByTagName('head')[0].appendChild(script);
+head.appendChild(script);
 
-// Main Loop
 for (i = 0; i < resources.length; i++) {
-  document.getElementsByTagName('head')[0].appendChild(jsOrCss(resources[i]));
-  //addToHead( jsOrCss( resources[i] ) );
+ var addme = jsOrCss(resources[i]);
+ head.appendChild(addme);
 }
+
