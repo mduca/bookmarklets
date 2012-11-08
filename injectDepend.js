@@ -14,7 +14,6 @@ function jsOrCss(file) {
 }
 
 function addToHead(addMe) {
-  return document.getElementsByTagName('head')[0].appendChild(addMe);
 }
 
 function createLinkTag(url) {
@@ -46,5 +45,6 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 // Main Loop
 for (i = 0; i < resources.length; i++) {
+  document.getElementsByTagName('head')[0].appendChild(jsOrCss(resources[i]));
   addToHead( jsOrCss( resources[i] ) );
 }
