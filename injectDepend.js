@@ -32,7 +32,7 @@ function createScriptTag(url) {
   return script;
 }
 
-document.getElementsByTagName('head')[0].appendChild(css);var script = document.createElement('script');
+var script = document.createElement('script');
 script.src = "http://code.jquery.com/jquery-1.7.2.min.js";
 script.type = "text/javascript";
 script.onload = function() {
