@@ -1,3 +1,25 @@
+
+function fileType(url) {
+  return url.split('.').pop();
+}
+
+function addCss(url) {
+  var css = document.createElement('link');
+  css.href = url;
+  css.rel = "stylesheet";
+  css.type = "text/css";
+  return css;
+}
+
+function addJs(url, load) {
+  var js = document.createElement('script');
+  script.src = url;
+  script.type = "text/javascript";
+  if (load) {
+    script.onload = load;
+  }
+}
+
 // CSS
 var css = document.createElement('link');
 css.href = "http://twitter.github.com/bootstrap/assets/css/bootstrap.css";
@@ -10,6 +32,7 @@ css.href = "http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css";
 css.rel = "stylesheet";
 css.type = "text/css";
 
+//JavaScript
 document.getElementsByTagName('head')[0].appendChild(css);var script = document.createElement('script');
 script.src = "http://code.jquery.com/jquery-1.7.2.min.js";
 script.type = "text/javascript";
