@@ -3,7 +3,8 @@ var resources = [ "http://twitter.github.com/bootstrap/assets/css/bootstrap.css"
                   "http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css",
                   "http://twitter.github.com/bootstrap/assets/js/bootstrap.js",
                   "http://code.jquery.com/ui/1.9.1/jquery-ui.min.js",
-                  ];
+                  ]
+
 var head = document.getElementsByTagName('head')[0];
 
 function fileType(file) {
@@ -38,11 +39,9 @@ script.onload = function() {
 
    jQuery("body").append(barHtml);
    jQuery("#hermes").draggable();
+   for (i = 0; i < resources.length; i++) {
+     var addme = jsOrCss(resources[i]);
+     head.appendChild(addme);
+   }
 }
 head.appendChild(script);
-
-for (i = 0; i < resources.length; i++) {
- var addme = jsOrCss(resources[i]);
- head.appendChild(addme);
-}
-
