@@ -9,12 +9,7 @@ script.onload = function() {
     script.type = "text/javascript";
     document.getElementsByTagName('head')[0].appendChild(script);
 
-  var script = document.createElement('script');
-    script.src = "http://code.jquery.com/ui/1.9.1/jquery-ui.min.js";
-    script.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(script);
-
-  var css = document.createElement('link');
+    var css = document.createElement('link');
     css.href = "http://twitter.github.com/bootstrap/assets/css/bootstrap.css";
     css.rel = "stylesheet";
     css.type = "text/css";
@@ -27,10 +22,17 @@ script.onload = function() {
     document.getElementsByTagName('head')[0].appendChild(css);
 
 
-  var barHtml = "<div id='hermes' class='navbar' style='width: 370px;'><div class='navbar-inner'><div class='container' style='width: auto;'><a class='brand' href='#'>Hermes</a><div class='btn-group' data-toggle='buttons-radio'><button id='btnStart' class='btn btn-success'>Start</button><button id='btnStop' class='btn btn-danger'>Stop</button></div><ul class='nav pull-right' role='navigatoin'><li class='dropdown'><a id='settings' href='#' role='button' class='dropdown-toggle' data-toggle='dropdown'>Settings<b class='caret'></b></a><ul class='dropdown-menu'><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 1</a></li><li class='divider'></li><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 2</a></li></ul></li></ul></div></div></div>";
+  var barHtml = "<div id='hermes' class='navbar' style='width: 350px;'><div class='navbar-inner'><div class='container' style='width: auto;'><a class='brand' href='#'>Hermes</a><div class='btn-group' data-toggle='buttons-radio'><button id='btnStart' class='btn btn-success'>Start</button><button id='btnStop' class='btn btn-danger'>Stop</button></div><ul class='nav pull-right' role='navigatoin'><li class='dropdown'><a id='settings' href='#' role='button' class='dropdown-toggle' data-toggle='dropdown'>Settings<b class='caret'></b></a><ul class='dropdown-menu'><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 1</a></li><li class='divider'></li><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 2</a></li></ul></li></ul></div></div></div>";
 
   jQuery("body").append(barHtml);
-  }
 
+  }
 document.getElementsByTagName('head')[0].appendChild(script);
 
+var script = document.createElement('script');
+    script.src = "http://code.jquery.com/ui/1.9.1/jquery-ui.min.js";
+    script.type = "text/javascript";
+    script.onload = function() {
+      jQuery.noConflict();
+    }
+    document.getElementsByTagName('head')[0].appendChild(script);
