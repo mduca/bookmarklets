@@ -25,12 +25,10 @@ function createLinkTag(url) {
   return css;
 }
 
-function createScriptTag(url, load = 1) {
+function createScriptTag(url) {
   var script = document.createElement('script');
   script.src = url;
   script.type = "text/javascript";
-  script.onload = load;
-  console.log(load);
   return script;
 }
 
