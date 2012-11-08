@@ -31,7 +31,7 @@
   function async_load(resources){
     for (i = 0; i < resources.length; i++) {
       var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertAfter(jsOrCss(resource[i])), x);
+      x.parentNode.insertAfter(jsOrCss(resource[i]), x);
     }
   if (window.attachEvent) {
     window.attachEven('onload', async_load);
