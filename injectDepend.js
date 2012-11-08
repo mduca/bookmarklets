@@ -14,7 +14,7 @@ function jsOrCss(file) {
 }
 
 function addToHead(addMe) {
-  document.getElementsByTagName('head')[0].appendChild(addMe);
+  return document.getElementsByTagName('head')[0].appendChild(addMe);
 }
 
 function createLinkTag(url) {
@@ -31,16 +31,19 @@ function createScriptTag(url, load) {
   script.type = "text/javascript";
   if (load) {
     script.onload = load;
+    console.log("loaded");
   }
+  return script
 }
 
 var jq = createScriptTag("http://code.jquery.com/jquery-1.7.2.min.js", function() {
   jQuery.noConflict();
   var barHtml = "<div id='hermes' class='navbar' style='width: 340px;'><div class='navbar-inner'><div class='container' style='width: auto;'><a class='brand' href='#'>Hermes</a><div class='btn-group' data-toggle='buttons-radio'><button id='btnStart' class='btn btn-success'>Start</button><button id='btnStop' class='btn btn-danger'>Stop</button></div><ul class='nav pull-right' role='navigatoin'><li class='dropdown'><a id='settings' href='#' role='button' class='dropdown-toggle' data-toggle='dropdown'>Settings<b class='caret'></b></a><ul class='dropdown-menu'><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 1</a></li><li class='divider'></li><li><a href='#' rel='popover' placement='right' data-content='This is the settings popover dialog'>Option 2</a></li></ul></li></ul></div></div></div>";
 
+
    jQuery("body").append(barHtml);
    jQuery("#hermes").draggable();
-  })
+  });
 
 addToHead(jq);
 // Main Loop
