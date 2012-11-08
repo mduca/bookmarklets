@@ -22,14 +22,14 @@ function createLinkTag(url) {
   css.href = url;
   css.rel = "stylesheet";
   css.type = "text/css";
-  return css;
+  //return css;
 }
 
 function createScriptTag(url) {
   var script = document.createElement('script');
   script.src = url;
   script.type = "text/javascript";
-  return script;
+ // return script;
 }
 
 var script = document.createElement('script');
