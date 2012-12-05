@@ -1,3 +1,3 @@
-*** Description
+# Description
 
-Organized snippets of different bookmakrlet ideas.
+Snippets from different bookmarklet ideas.
